@@ -18,6 +18,7 @@ function Header() {
             <Link to="/admin/dashboard" className="nav-link">Dashboard</Link>
             <Link to="/admin/categories" className="nav-link">Categories</Link>
             <Link to="/admin/brands" className="nav-link">Bands</Link>
+            <Link to="/admin/products" className="nav-link">Products</Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/action/1">Action</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/action/2">Another action</NavDropdown.Item>

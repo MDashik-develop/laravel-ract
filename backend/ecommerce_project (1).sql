@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2025 at 06:51 PM
+-- Generation Time: Feb 24, 2025 at 08:33 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -205,7 +205,7 @@ CREATE TABLE `personal_access_tokens` (
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
 (1, 'App\\Models\\User', 1, 'token', 'df1523cbd554579be9bfd7dba1f8139b2c3cc1e4e4f27ee2c4e3d189e4bdfe4c', '[\"*\"]', NULL, NULL, '2025-02-22 08:44:01', '2025-02-22 08:44:01'),
 (2, 'App\\Models\\User', 1, 'token', '76d3974dbb6e261973da42b4b11bf5ca776c4968e0fbfe12647f41091d546c49', '[\"*\"]', NULL, NULL, '2025-02-22 08:44:04', '2025-02-22 08:44:04'),
-(3, 'App\\Models\\User', 1, 'token', 'efecd751b83e68dd3ca88358dea9d4d30fe7df1b9ba7d3c9fd0bedac5e53150e', '[\"*\"]', '2025-02-23 03:55:31', NULL, '2025-02-22 08:44:08', '2025-02-23 03:55:31'),
+(3, 'App\\Models\\User', 1, 'token', 'efecd751b83e68dd3ca88358dea9d4d30fe7df1b9ba7d3c9fd0bedac5e53150e', '[\"*\"]', '2025-02-24 08:21:56', NULL, '2025-02-22 08:44:08', '2025-02-24 08:21:56'),
 (4, 'App\\Models\\User', 1, 'token', '8fdd0c0ea79f4297b633291d94d89e8a16f85f0ce11bb046d64998d5c8472737', '[\"*\"]', NULL, NULL, '2025-02-22 10:41:48', '2025-02-22 10:41:48'),
 (5, 'App\\Models\\User', 1, 'token', '8120ec37f11fa875227c1e8ab5437a1aec117ab68fbaec5d764fe2335beccf3b', '[\"*\"]', NULL, NULL, '2025-02-22 10:41:50', '2025-02-22 10:41:50'),
 (6, 'App\\Models\\User', 1, 'token', '627b64c9fc667b2938339ede49c33ec509d991bcf698038021ecf36d369b0a0a', '[\"*\"]', '2025-02-22 10:42:01', NULL, '2025-02-22 10:41:55', '2025-02-22 10:42:01'),
@@ -219,7 +219,9 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (14, 'App\\Models\\User', 1, 'token', 'dde7c8e269cd96654f15850712cbfd78fbdb1d9395873d0fb8b979a5fffe7d96', '[\"*\"]', NULL, NULL, '2025-02-22 10:54:54', '2025-02-22 10:54:54'),
 (15, 'App\\Models\\User', 1, 'token', '4572a6e21b33b823ea7f1377dedad42de320ac091cdd594e7f00acf7d45cbd71', '[\"*\"]', NULL, NULL, '2025-02-22 10:54:59', '2025-02-22 10:54:59'),
 (16, 'App\\Models\\User', 1, 'token', '21ef1428e79a365204e81ad3577ccd063f0504685cdcd9a28b725172779a4bd5', '[\"*\"]', NULL, NULL, '2025-02-22 10:55:10', '2025-02-22 10:55:10'),
-(17, 'App\\Models\\User', 1, 'token', '8aee8e1105b0f48ddfeeef872a30f540ecdda01735366e4a43f3b3c6ed937bf1', '[\"*\"]', '2025-02-23 11:50:17', NULL, '2025-02-22 10:55:21', '2025-02-23 11:50:17');
+(17, 'App\\Models\\User', 1, 'token', '8aee8e1105b0f48ddfeeef872a30f540ecdda01735366e4a43f3b3c6ed937bf1', '[\"*\"]', '2025-02-23 11:50:17', NULL, '2025-02-22 10:55:21', '2025-02-23 11:50:17'),
+(18, 'App\\Models\\User', 1, 'token', '6610fea450d4e6fd60902552271a9985bed160ce308a9827459da59c52bff20f', '[\"*\"]', NULL, NULL, '2025-02-24 06:40:32', '2025-02-24 06:40:32'),
+(19, 'App\\Models\\User', 1, 'token', '30c35d99b8fa0dd81f45e83f8a15781e4149c53c720e558f7e4c6343a302ef3e', '[\"*\"]', '2025-02-24 13:33:10', NULL, '2025-02-24 06:40:47', '2025-02-24 13:33:10');
 
 -- --------------------------------------------------------
 
@@ -257,15 +259,16 @@ INSERT INTO `products` (`id`, `title`, `price`, `compare_price`, `description`, 
 (15, 'shtr', 10.2, NULL, 'hdhfcdcg', 'ddhngfxn', '15-1740249635.jpg', 1, 1, 10, 'hbcn', 'hngh', 1, 'no', '2025-02-22 12:40:35', '2025-02-22 12:40:36'),
 (16, 'Sas', 23, NULL, NULL, 'asxca', NULL, 1, 1, NULL, '32r', NULL, 1, 'yes', '2025-02-23 08:37:46', '2025-02-23 08:37:46'),
 (17, 'ee', 2, NULL, NULL, 'eee', NULL, 1, 1, NULL, 'e', NULL, 0, 'yes', '2025-02-23 08:42:30', '2025-02-23 08:42:30'),
-(18, 'Grow You', 23, 3, '<p><br></p>', 'asasaas', NULL, 1, 1, NULL, '21', NULL, 0, 'yes', '2025-02-23 10:04:22', '2025-02-23 10:04:22'),
-(19, 'zxcvsdz', 23, 233, '<p><br></p>', 'vDZVzd', NULL, 1, 1, 322, '23', NULL, 1, 'yes', '2025-02-23 10:06:25', '2025-02-23 10:06:25'),
 (20, 'Web Development', 32, 23, NULL, 'acASC', NULL, 1, 1, 23, '23rd', NULL, 0, 'yes', '2025-02-23 10:22:51', '2025-02-23 10:22:51'),
 (21, 'test', 43, 34, NULL, 'test', NULL, 1, 1, 43, '4w4', NULL, 1, 'yes', '2025-02-23 10:25:17', '2025-02-23 10:25:17'),
 (22, 'test', 43, 34, '<p><em>34r34w</em></p>', 'rr34w3r4', NULL, 1, 1, 43, '4w4we', '3w', 1, 'yes', '2025-02-23 10:29:08', '2025-02-23 10:29:08'),
 (23, 'test3', 44, 34, '<p><strong><u>test3</u></strong></p>', 'test3', '23-1740330805.png', 1, 1, 43, 'fer3', 'frer3', 1, 'yes', '2025-02-23 11:13:25', '2025-02-23 11:13:26'),
 (24, 'DASDsdvx', 23, 3, '<p>vzsdvsa</p>', 'dsvsd', '24-1740331193.png', 1, 1, 23, 'wed32rdsw3', '23rew3', 1, 'yes', '2025-02-23 11:19:53', '2025-02-23 11:19:53'),
 (25, 'Web Development', 23, 34, '<p>qwd</p>', 'qwd', '25-1740332615.png', 1, 1, 43, '4w4weewq', 'frer3ww', 1, 'yes', '2025-02-23 11:43:35', '2025-02-23 11:43:36'),
-(26, 'Web Development', 23, 34, '<p>e</p>', 'ew', '26-1740333015.png', 1, 1, 43, 'eeer', 'frer3ww', 0, '', '2025-02-23 11:50:15', '2025-02-23 11:50:15');
+(26, 'Web Development', 23, 34, '<p>e</p>', 'ew', '26-1740417421.png', 1, 1, 43, 'eeer', 'frer3ww', 0, '', '2025-02-23 11:50:15', '2025-02-24 11:25:28'),
+(27, 'test.2.3', 23, 150, NULL, 'sdsdsad', '27-1740411359.jpg', 1, 1, 23, '32r fh', '3w', 1, 'yes', '2025-02-24 08:37:01', '2025-02-24 12:09:04'),
+(28, 'test size create.2', 1, 0.5, NULL, 'size s d', '28-1740421958.png', 1, 1, 2, 'sw', 'e', 1, 'no', '2025-02-24 12:32:38', '2025-02-24 12:39:36'),
+(30, 'Web Development', 32, 3, NULL, 'w', '30-79021740423810.png', 1, 1, 2, '2qw', 'qw32w', 0, 'yes', '2025-02-24 13:03:30', '2025-02-24 13:15:11');
 
 -- --------------------------------------------------------
 
@@ -295,7 +298,17 @@ INSERT INTO `product_images` (`id`, `product_id`, `image`, `created_at`, `update
 (7, 25, '25-1740332616.png', '2025-02-23 11:43:36', '2025-02-23 11:43:36'),
 (8, 25, '25-1740332616.png', '2025-02-23 11:43:37', '2025-02-23 11:43:37'),
 (9, 26, '26-1740333015.png', '2025-02-23 11:50:15', '2025-02-23 11:50:15'),
-(10, 26, '26-1740333015.png', '2025-02-23 11:50:16', '2025-02-23 11:50:16');
+(10, 26, '26-1740333015.png', '2025-02-23 11:50:16', '2025-02-23 11:50:16'),
+(12, 27, '27-1740407822.png', '2025-02-24 08:37:03', '2025-02-24 08:37:03'),
+(13, 27, '27-1740407823.png', '2025-02-24 08:37:03', '2025-02-24 08:37:03'),
+(14, 27, '27-1740411246.jpg', '2025-02-24 09:34:06', '2025-02-24 09:34:06'),
+(15, 27, '27-1740411359.jpg', '2025-02-24 09:36:00', '2025-02-24 09:36:00'),
+(16, 27, '27-1740415630.jpg', '2025-02-24 10:47:10', '2025-02-24 10:47:10'),
+(17, 27, '27-1740415638.jpg', '2025-02-24 10:47:18', '2025-02-24 10:47:18'),
+(18, 26, '26-1740417421.png', '2025-02-24 11:17:02', '2025-02-24 11:17:02'),
+(19, 28, '28-1740421958.png', '2025-02-24 12:32:39', '2025-02-24 12:32:39'),
+(23, 30, '30-1740424502.png', '2025-02-24 13:15:02', '2025-02-24 13:15:02'),
+(24, 30, '30-1740424507.png', '2025-02-24 13:15:08', '2025-02-24 13:15:08');
 
 -- --------------------------------------------------------
 
@@ -310,6 +323,15 @@ CREATE TABLE `product_sizes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product_sizes`
+--
+
+INSERT INTO `product_sizes` (`id`, `product_id`, `size_id`, `created_at`, `updated_at`) VALUES
+(10, 28, 1, '2025-02-24 12:39:36', '2025-02-24 12:39:36'),
+(11, 28, 2, '2025-02-24 12:39:36', '2025-02-24 12:39:36'),
+(18, 27, 2, '2025-02-24 13:16:22', '2025-02-24 13:16:22');
 
 -- --------------------------------------------------------
 
@@ -332,7 +354,8 @@ CREATE TABLE `sessions` (
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
 ('BQ6CvbCjxtQfKnndx7pyB3xszpLarHIcdLKGLXsT', NULL, '127.0.0.1', 'PostmanRuntime/7.39.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSDJKVXlwSlJ4alMxSUt0NGFRZE9MUUdPRXY4b29SSFB5MUdDMVFlUSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740242840),
-('hcJNEDV55LC5Yw0BYAtAvNfdbopbhNT8n6dhpoHO', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaTFrZnRJU0hFaXFLWW1JVmIySFBSVXFHWDBmRVR2NE81d3BGT2hCZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740243007);
+('hcJNEDV55LC5Yw0BYAtAvNfdbopbhNT8n6dhpoHO', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaTFrZnRJU0hFaXFLWW1JVmIySFBSVXFHWDBmRVR2NE81d3BGT2hCZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740243007),
+('I6Hn0fU3KqhYrvRg9qyr262AuXGBCe14aCm1FmoG', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQVVTVGR1aDJYeXdFbVU5VE9aRGZRQWZ3N29xemRibkEzak9JZ0pJcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740400818);
 
 -- --------------------------------------------------------
 
@@ -346,6 +369,17 @@ CREATE TABLE `sizes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sizes`
+--
+
+INSERT INTO `sizes` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'S', NULL, NULL),
+(2, 'M', NULL, NULL),
+(3, 'L', NULL, NULL),
+(4, 'X', NULL, NULL),
+(5, 'XXL', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -394,7 +428,16 @@ INSERT INTO `temp_images` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (27, '1740332548.png', '2025-02-23 11:42:28', '2025-02-23 11:42:28'),
 (28, '1740332598.png', '2025-02-23 11:43:18', '2025-02-23 11:43:18'),
 (29, '1740333006.png', '2025-02-23 11:50:06', '2025-02-23 11:50:06'),
-(30, '1740333008.png', '2025-02-23 11:50:08', '2025-02-23 11:50:08');
+(30, '1740333008.png', '2025-02-23 11:50:08', '2025-02-23 11:50:08'),
+(31, '1740407783.png', '2025-02-24 08:36:23', '2025-02-24 08:36:23'),
+(32, '1740407790.png', '2025-02-24 08:36:30', '2025-02-24 08:36:30'),
+(33, '1740407804.png', '2025-02-24 08:36:44', '2025-02-24 08:36:44'),
+(34, '1740414959.png', '2025-02-24 10:35:59', '2025-02-24 10:35:59'),
+(35, '1740415039.png', '2025-02-24 10:37:19', '2025-02-24 10:37:19'),
+(36, '1740415073.png', '2025-02-24 10:37:53', '2025-02-24 10:37:53'),
+(37, '1740421955.png', '2025-02-24 12:32:35', '2025-02-24 12:32:35'),
+(38, '1740422429.png', '2025-02-24 12:40:29', '2025-02-24 12:40:29'),
+(39, '1740423803.png', '2025-02-24 13:03:23', '2025-02-24 13:03:23');
 
 -- --------------------------------------------------------
 
@@ -577,37 +620,37 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `product_sizes`
 --
 ALTER TABLE `product_sizes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `sizes`
 --
 ALTER TABLE `sizes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `temp_images`
 --
 ALTER TABLE `temp_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -23,6 +23,8 @@ function Create({ placeholder }) {
     const [disabled, setDisabled] = useState(false);
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
+    const [sizes, setSizes] = useState([]);
+    const [sizesChecked, setSizesChecked] = useState([]);
     const [gallery, setGallery] = useState([]);
     const [galleryImages, setGalleryImages] = useState([]);
     const navigate = useNavigate();
@@ -105,6 +107,25 @@ function Create({ placeholder }) {
                 }
             })
     }
+    const fetchSizes = async () => {
+        const res = await fetch(`${apiUrl}/sizes`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${adminToken()}`
+            }
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.status == 200) {
+                    console.log(result)
+                    setSizes(result.data)
+                } else {
+                    console.log("something went-fetchSizes- wrong")
+                }
+            })
+    }
 
     const handleFile = async (e) => {
         const formData = new FormData();
@@ -136,9 +157,11 @@ function Create({ placeholder }) {
         const newGallery = galleryImages.filter(gallery => gallery !== image)
         setGalleryImages(newGallery)
     }
+
     useEffect(() => {
         fetchCategories()
         fetchBrands()
+        fetchSizes()
     }, [])
 
     return (
@@ -340,10 +363,36 @@ function Create({ placeholder }) {
                             </div>
                         </div>
 
+                        <div className="mb-3">
+                            <label className="form-label">Sizes</label>
+                            <br />
+                            {
+                                sizes && sizes.map(size => {
+                                    return (
+                                        <div key={size.id} className="form-check-inline ps-3">
+                                            <input
+                                                {
+                                                ...register("sizes")
+                                                }
+                                                checked={sizesChecked.includes(size.id)}
+                                                onChange={(e) => {
+                                                    if (e.target.checked) {
+                                                        setSizesChecked([...sizesChecked, size.id])
+                                                    } else {
+                                                        setSizesChecked(sizesChecked.filter(sid => size.id != sid))
+                                                    }
+                                                }}
+                                                type="checkbox" className='form-check-input' value={size.id} id={`size-${size.id}`} />
+                                            <label htmlFor={`size-${size.id}`} className='form-check-label ps-2'>{size.name}</label>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
 
                         <div className="mb-3">
 
-                            <label htmlFor="featured" className="form-label">Status</label>
+                            <label htmlFor="featured" className="form-label">featured</label>
                             <select id="featued"
                                 className={`form-control ${errors.status && 'is-invalid'}`}
                                 {
@@ -352,8 +401,8 @@ function Create({ placeholder }) {
                                 })
                                 }
                             >
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                             </select>
 
                             {
@@ -377,11 +426,11 @@ function Create({ placeholder }) {
                                 {
                                     galleryImages && galleryImages.map((image, index) => {
                                         return (
-                                            <div key={index} className="col-md-3">
+                                            <div key={index} className="col-md-3 m-1">
                                                 <div className="card shadow">
                                                     <img src={image} alt="" className="w-100" />
-                                                    <button className='btn btn-danger' onClick={() => deleteImage(image)}>Delete</button>
                                                 </div>
+                                                <button className='btn btn-danger w-100' onClick={() => deleteImage(image)}>Delete</button>
                                             </div>
                                         )
                                     })

@@ -51,7 +51,7 @@ function Login() {
   return (
     <Layout>
       <form className=" container p-4 mx-auto max-w-sm" onSubmit={handleSubmit(onSubmit)}>
-        <div className="card">
+        <div className="card p-3">
           <div className="mb-4">
             <label htmlFor="email" className="block font-medium">
               Email address

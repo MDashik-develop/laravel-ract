@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './components/common/Home'
+import Home from './components/Home'
 import Shop from './components/common/Shop'
 import Login from './components/admin/Login'
 import { ToastContainer, toast } from 'react-toastify';
@@ -18,6 +18,7 @@ import { default as EditBrand } from './components/admin/brand/Edit'
 import { default as ShowProduct } from './components/admin/product/Show'
 import { default as CreateProduct } from './components/admin/product/Create'
 import { default as EditProduct } from './components/admin/product/Edit'
+
 
 
 function App() {

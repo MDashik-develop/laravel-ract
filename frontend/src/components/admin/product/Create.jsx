@@ -283,8 +283,8 @@ function Create({ placeholder }) {
                                 }
                             </div>
                             <div className="col-6 pl-2">
-                                <label htmlFor="">Discount Price</label>
-                                <input type="text" placeholder='Discount Price'
+                                <label htmlFor="">Compare Price</label>
+                                <input type="text" placeholder='Compare Price'
                                     className={`form-control ${errors.compare_price && 'is-invalid'}`}
                                     {
                                     ...register("compare_price")
